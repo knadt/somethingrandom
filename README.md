@@ -36,11 +36,12 @@ where XXY is the Token copied.
 6. Create a Quiality Gate ([here: Quality Gates](http://localhost:9000/quality_gates))
 7. Click on "Create"
 8. Name the Quality Gate "New_Gate"
-9. Click "Add Condition" on the right side of the screen
+9. Select "On overall code" 
+10. Click "Add Condition" on the right side of the screen
 <img width="1034" alt="Screenshot 2022-05-12 at 21 58 57" src="https://user-images.githubusercontent.com/16526578/168167068-b4267076-0a33-4ed5-aa4b-10094d8cabce.png">
-10. Set "Quality Gate fails when" to "Vulnerabilities" and operator value equal to 0.
+11. Set "Quality Gate fails when" to "Vulnerabilities" and operator value equal to 0.
 <img width="459" alt="Screenshot 2022-05-12 at 22 00 12" src="https://user-images.githubusercontent.com/16526578/168167239-b823a3b3-6929-4f26-a29e-ab5685888978.png">
-11. Make this Quality gate deault by clicking "Set as Default" button on the top right of the screen.
+12. Make this Quality gate deault by clicking "Set as Default" button on the top right of the screen.
 
 ## Stage 3
 
