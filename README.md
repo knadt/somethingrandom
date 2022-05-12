@@ -13,7 +13,7 @@ cd somethingrandom
 ```
 docker-compose up -d
 ```
-2. Login into Sonarqube ([SonarQube homepage: http://localhost:9000/](http://localhost:9000/))
+2. Login into Sonarqube ([SonarQube homepage: http://0.0.0.0:9000/](http://0.0.0.0:9000/))
 
 Credentials:
 ```
@@ -52,7 +52,7 @@ chmod +x pipeline.sh
 ```
 ./pipeline.sh
 ```
-3. View the console output and see the SonarQube project [here: http://localhost:9000/dashboard?id=buzz-project](http://localhost:9000/dashboard?id=buzz-project)
+3. View the console output and see the SonarQube project [here: http://0.0.0.0:9000/dashboard?id=buzz-project](http://0.0.0.0:9000/dashboard?id=buzz-project)
 4. View the running application [here: http://0.0.0.0:5000/](http://0.0.0.0:5000/)
 <img width="721" alt="Screenshot 2022-05-12 at 17 29 24" src="https://user-images.githubusercontent.com/16526578/168166288-19e6b34a-1af7-48aa-9f5c-1001111b9bbc.png">
 
@@ -68,5 +68,5 @@ def configure_app(app):
 ```
 ./pipeline.sh
 ```
-4. View that the pipeline fails ([why : http://localhost:9000/project/issues?id=buzz-project&resolved=false&types=VULNERABILITY](http://localhost:9000/project/issues?id=buzz-project&resolved=false&types=VULNERABILITY))
+4. View that the pipeline fails ([why : http://0.0.0.0:9000/project/issues?id=buzz-project&resolved=false&types=VULNERABILITY](http://0.0.0.0:9000/project/issues?id=buzz-project&resolved=false&types=VULNERABILITY))
 <img width="918" alt="Screenshot 2022-05-12 at 17 23 25" src="https://user-images.githubusercontent.com/16526578/168122939-2499911e-cd30-4e28-8c41-2c4ba5797642.png">
