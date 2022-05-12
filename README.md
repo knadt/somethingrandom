@@ -57,5 +57,5 @@ def configure_app(app):
 ```
 ./pipeline.sh
 ```
-4. View that the pipeline fails
+4. View that the pipeline fails ([why : http://localhost:9000/project/issues?id=buzz-project&resolved=false&types=VULNERABILITY](http://localhost:9000/project/issues?id=buzz-project&resolved=false&types=VULNERABILITY))
 <img width="918" alt="Screenshot 2022-05-12 at 17 23 25" src="https://user-images.githubusercontent.com/16526578/168122939-2499911e-cd30-4e28-8c41-2c4ba5797642.png">
