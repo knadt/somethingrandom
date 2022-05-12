@@ -13,7 +13,7 @@ cd somethingrandom
 ```
 docker-compose up -d
 ```
-2. Login into Sonarqube ([SonarQube homepage](http://localhost:9000/))
+2. Login into Sonarqube ([SonarQube homepage: http://localhost:9000/](http://localhost:9000/))
 
 Credentials:
 ```
@@ -45,3 +45,17 @@ chmod +x pipeline.sh
 ```
 3. View the console output and see the SonarQube project [here: http://localhost:9000/dashboard?id=buzz-project](http://localhost:9000/dashboard?id=buzz-project)
 4. View the running application [here: http://0.0.0.0:5000/](http://0.0.0.0:5000/)
+
+## Stage 4
+1. Add vulnerable code to the aplication
+2. Open `app.py` in any code editor and paste the below code into the file.
+```
+def configure_app(app):
+    app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://user:@domain.com" # Noncompliant
+```
+3. Re-run the pipeline
+```
+./pipeline.sh
+```
+4. View that the pipeline fails
+<img width="918" alt="Screenshot 2022-05-12 at 17 23 25" src="https://user-images.githubusercontent.com/16526578/168122939-2499911e-cd30-4e28-8c41-2c4ba5797642.png">
