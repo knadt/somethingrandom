@@ -15,15 +15,21 @@ cat -n /tmp/buzz/test-artifact.txt
 
 ###STAGE 4 - SECURITY###
 echo "STAGE 4: Security"
-docker run --network=host \
+if docker run --network=host \
     --rm \
     -e SONAR_HOST_URL="http://0.0.0.0:9000" \
-    -e SONAR_LOGIN='e6b1dfa1df5d2fe0602fb9c31519020f02740970' \
+    -e SONAR_LOGIN=${SONAR_TOKEN} \
     -v "/tmp/buzz/:/usr/src" \
     sonarsource/sonar-scanner-cli \
     -Dsonar.qualitygate.wait=true \
-    -Dsonar.projectKey=buzz-project -Dsonar.sources=/usr/src -X
+    -Dsonar.projectKey=buzz-project -Dsonar.sources=/usr/src -X ; then
+    echo "STAGE 4 PASSED"
+else
+    echo "STAGE 4 FAILED"
+    exit 1
+fi
 ###STAGE 5 - DEPLOY###
 echo "STAGE 5: Deploy"
 docker build -t buzz .         
 docker run -p 5000:5000 --rm -it buzz
+
