@@ -70,3 +70,7 @@ def configure_app(app):
 ```
 4. View that the pipeline fails ([why : http://0.0.0.0:9000/project/issues?id=buzz-project&resolved=false&types=VULNERABILITY](http://0.0.0.0:9000/project/issues?id=buzz-project&resolved=false&types=VULNERABILITY))
 <img width="918" alt="Screenshot 2022-05-12 at 17 23 25" src="https://user-images.githubusercontent.com/16526578/168122939-2499911e-cd30-4e28-8c41-2c4ba5797642.png">
+
+## POC
+https://user-images.githubusercontent.com/16526578/168171901-3a623723-7849-4d94-bac4-51070a72a6fe.mov
+
