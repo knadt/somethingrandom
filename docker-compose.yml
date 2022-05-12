@@ -1,11 +1,5 @@
 version: "3"
 services:
-  buzz_web_app:
-    build: .
-    ports:
-        - "5000:5000"
-    depends_on:
-      - sonarqube
   sonarqube:
     image: sonarqube:community
     depends_on:
